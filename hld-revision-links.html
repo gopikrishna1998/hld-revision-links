@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>📚 HLD Revision Links</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: 'Segoe UI', sans-serif;
+            padding: 2rem;
+            max-width: 900px;
+            margin: auto;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            color: #bb86fc;
+        }
+
+        section {
+            background-color: #1e1e1e;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: #03dac6;
+        }
+
+        ul {
+            padding-left: 1.2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin: 0.4rem 0;
+        }
+
+        a {
+            color: #82aaff;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 0.6rem 1.2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 6px;
+            background-color: #3700b3;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #6200ee;
+        }
+
+        @media (max-width: 600px) {
+            button {
+                font-size: 1.1rem;
+                padding: 0.8rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h1>📚 High Level Design Revision Links</h1>
+
+    <section>
+        <ul id="group13">
+            <li><a href="https://www.notion.so/Mnemonics-1bee009b3cd280828c1bf0d970020192" target="_blank">Mnemonics</a></li>
+            <li><a href="https://www.notion.so/Common-HLD-points-1c6e009b3cd280e08222e87de0485ff4?pvs=24&cookie_sync_completed=true" target="_blank"></a></li>
+            <li><a href="https://www.notion.so/TinyURL-Pastebin-1bee009b3cd280b1bec2f082c42d6b82?source=copy_link" target="_blank">TinyURL/Pastebin</a></li>
+            <li><a href="https://www.notion.so/Newsfeed-1bee009b3cd280f68126eaac16639566?source=copy_link" target="_blank">Newsfeed</a></li>
+            <li><a href="https://www.notion.so/Twitter-1bee009b3cd2807696aacbdd94808b9b?source=copy_link" target="_blank">Twitter</a></li>
+            <li><a href="https://www.notion.so/Instagram-1bee009b3cd280fdb0c5ddaf80558c14?source=copy_link" target="_blank">Instagram</a></li>
+            <li><a href="https://www.notion.so/Dropbox-1bee009b3cd2808bbceef5c5b2ac692b?source=copy_link" target="_blank">Dropbox</a></li>
+            <li><a href="https://www.notion.so/WhatsApp-1bde009b3cd28025b788f42b94f374e4?source=copy_link" target="_blank">WhatsApp</a></li>
+            <li><a href="https://www.notion.so/YouTube-1bee009b3cd2809f9866fa6615d4e320?source=copy_link" target="_blank">YouTube</a></li>
+            <li><a href="https://www.notion.so/Typeahead-Suggestion-1bee009b3cd2806db5a2d93c09649633?source=copy_link" target="_blank">Typeahead Suggestion</a></li>
+            <li><a href="https://www.notion.so/Twitter-Search-1bfe009b3cd2801a9326f8f1e1998a02?source=copy_link" target="_blank">Twitter Search</a></li>
+            <li><a href="https://www.notion.so/Web-Crawler-1c2e009b3cd2801aae5cef5ee948ece2?source=copy_link" target="_blank">Web Crawler</a></li>
+            <li><a href="https://www.notion.so/Yelp-1c0e009b3cd280debaaef70a46324bbe?source=copy_link" target="_blank">Yelp</a></li>
+            <li><a href="https://www.notion.so/Uber-1c2e009b3cd2805a9276e26cea4ec5a8?source=copy_link" target="_blank">Uber</a></li>
+            <li><a href="https://www.notion.so/BookMyShow-1bfe009b3cd280a78710c4eae0ea3c5f?source=copy_link" target="_blank">BookMyShow</a></li>
+        </ul>
+        <button onclick="openGroup('group13')">Open All</button>
+    </section>
+
+    <script>
+        function openGroup(groupId) {
+            document.querySelectorAll(`#${groupId} a`)
+                .forEach(link => window.open(link.href, '_blank'));
+        }
+
+        // Save scroll position before the page unloads (using localStorage)
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('scrollY', window.scrollY);
+        });
+
+        // Restore scroll position when the page loads (using localStorage)
+        window.addEventListener('load', () => {
+            const scrollY = localStorage.getItem('scrollY');
+            if (scrollY !== null) {
+                window.scrollTo(0, parseInt(scrollY));
+            }
+        });
+    </script>
+</body>
+
+</html>
